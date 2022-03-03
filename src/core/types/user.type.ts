@@ -11,6 +11,9 @@ export class UserType {
   @Field(() => String, { description: 'last name of the user' })
   lastName: string;
 
+  @Field(() => String, { description: 'password of the user '})
+  password: string;
+
   @Field(() => Number, { description:  'Country Code'})
   country: number;
 

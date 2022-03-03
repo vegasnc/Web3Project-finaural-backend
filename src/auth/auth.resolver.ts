@@ -15,13 +15,13 @@ export class AuthResolver {
   async signUp(
     @Args('signUpCredentialsInput') signUpCredentialsInput: SignUpCredentialsInput
   ) {
-    await this.authService.signUp(signUpCredentialsInput);
+    return await this.authService.signUp(signUpCredentialsInput);
   }
 
   @Query(returns => SignInType)
   async signIn(
     @Args('signInCredentialsInput') signInCredentialsInput: SignInCredentialsInput
   ) {
-    await this.authService.signIn(signInCredentialsInput);
+    return await this.authService.signIn(signInCredentialsInput);
   }
 }
